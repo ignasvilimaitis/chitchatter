@@ -11,9 +11,9 @@ export const rtcConfig: RTCConfiguration = {
   // CONNECTED TO THE INTERNET.
   iceServers: [
     {
-      urls: ['turn:relay1.expressturn.com:3478'],
-      username: 'efQUQ79N77B5BNVVKF',
-      credential: 'N4EAUgpjMzPLrxSS',
+      urls: [import.meta.env['VITE_TURN_URL']],
+      username: import.meta.env['VITE_TURN_USERNAME'],
+      credential: import.meta.env['VITE_TURN_CREDENTIAL'],
     },
   ],
 }
