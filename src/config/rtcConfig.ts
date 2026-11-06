@@ -9,11 +9,5 @@ export const rtcConfig: RTCConfiguration = {
   // property from the rtcConfig object. IF YOU DISABLE RELAY SERVERS,
   // CHITCHATTER PEERS MAY NOT BE ABLE TO CONNECT DEPENDING ON HOW THEY ARE
   // CONNECTED TO THE INTERNET.
-  iceServers: [
-    {
-      urls: [import.meta.env['VITE_TURN_URL']],
-      username: import.meta.env['VITE_TURN_USERNAME'],
-      credential: import.meta.env['VITE_TURN_CREDENTIAL'],
-    },
-  ],
+  iceServers: [{ urls: ['stun:stun.l.google.com:19302'] }],
 }
