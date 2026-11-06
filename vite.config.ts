@@ -85,6 +85,10 @@ const config = () => {
     ],
     resolve: {
       alias: {
+        'virtual:pwa-register/react': path.resolve(
+          __dirname,
+          'src/test/pwa-register-stub.ts'
+        ),
         webtorrent: fileURLToPath(
           new URL(
             './node_modules/webtorrent/webtorrent.min.js',
